@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/startscreen.unity
     guid: 889206ed74b704798987485461fc4b7f
   - enabled: 1
+    path: Assets/Scenes/_main_jacktest.unity
+    guid: c504fcb328f35484390915731f7d6f88
+  - enabled: 0
     path: Assets/Scenes/jack_carmovement_test.unity
     guid: 429326e0c16a84d82aaeebdcc7d85b12
   - enabled: 1
