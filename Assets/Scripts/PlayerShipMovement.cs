@@ -40,17 +40,11 @@ public class PlayerShipMovement : MonoBehaviour
 	{
 
 		_stickInput = Camera.main.transform.TransformDirection(new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")));
-		HandleMovement(new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")));
+		//HandleMovement(new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")));
 
-		HandleRotation(new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")));
+		//HandleRotation(new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")));
 
-
-		// Brings the Tot Home if they fall off ; )
-		if(transform.position.y <  -25.0f)
-		{
-			transform.position = new Vector3(5.0f, 25.0f, 5.0f);
-			_rigidbody.velocity = Vector3.zero;
-		}
+	
 			
 	}
 
