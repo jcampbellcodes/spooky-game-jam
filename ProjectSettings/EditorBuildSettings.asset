@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/startscreen.unity
+    guid: 889206ed74b704798987485461fc4b7f
+  - enabled: 1
+    path: Assets/Scenes/jack_carmovement_test.unity
+    guid: 429326e0c16a84d82aaeebdcc7d85b12
+  - enabled: 1
+    path: Assets/Scenes/endscreen.unity
+    guid: 1bccea059bd784ee59975a9c143a6796
