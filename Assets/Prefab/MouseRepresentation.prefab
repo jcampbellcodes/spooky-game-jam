@@ -20,11 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4223234843866140}
   - component: {fileID: 33513999647167378}
-  - component: {fileID: 135060965613334010}
+  - component: {fileID: 136356505216241968}
   - component: {fileID: 23667987248232948}
   - component: {fileID: 114092149578516526}
-  - component: {fileID: 54428621072160746}
-  - component: {fileID: 145662505339991514}
   m_Layer: 0
   m_Name: MouseRepresentation
   m_TagString: Untagged
@@ -39,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1949930217606414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.99, y: 3.06, z: -2.05}
-  m_LocalScale: {x: -0.42079285, y: -0.42079282, z: -0.42079282}
+  m_LocalPosition: {x: -0.20156479, y: 3.45, z: -2.1745348}
+  m_LocalScale: {x: 2.982523, y: 2.9825242, z: 2.9825242}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,22 +81,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1949930217606414}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54428621072160746
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949930217606414}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &114092149578516526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,8 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9b62aea63669d4cbe1f5891eec2d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &135060965613334010
-SphereCollider:
+--- !u!136 &136356505216241968
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -119,28 +102,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!145 &145662505339991514
-SpringJoint:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949930217606414}
-  m_ConnectedBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0.49999997, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -2.99, y: 2.8496037, z: -2.05}
-  serializedVersion: 2
-  m_Spring: 10
-  m_Damper: 0.2
-  m_MinDistance: 0
-  m_MaxDistance: 0
-  m_Tolerance: 0.025
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
+  m_Radius: 1.0656015
+  m_Height: 5.035814
+  m_Direction: 1
+  m_Center: {x: 0.17729844, y: 1.5179069, z: 0.38830343}
