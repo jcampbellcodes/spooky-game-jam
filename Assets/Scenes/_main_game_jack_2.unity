@@ -5367,12 +5367,12 @@ Prefab:
     - target: {fileID: 65191748784173004, guid: d285367ea555c40babb6f09c682198b0,
         type: 2}
       propertyPath: m_Size.x
-      value: 50
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 65191748784173004, guid: d285367ea555c40babb6f09c682198b0,
         type: 2}
       propertyPath: m_Size.z
-      value: 50
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d285367ea555c40babb6f09c682198b0, type: 2}
