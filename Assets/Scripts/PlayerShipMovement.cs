@@ -9,7 +9,7 @@ public class PlayerShipMovement : MonoBehaviour
 	Vector2 _stickInput;
 	Vector3 _moveVector = Vector3.zero;
 
-	private const float MOVE_SPEED = 200.0f;
+	private const float MOVE_SPEED = 600.0f;
 	private const float VELOCITY_ROTATE_SPEED = 2.0f;
 	private const float ROTATION_SPEED = 8.0f;
 
@@ -51,11 +51,13 @@ public class PlayerShipMovement : MonoBehaviour
 		else if(Input.GetMouseButton(0))
 		{
 			// give your discovery to the rotation!
-			Vector2 curPos = Input.mousePosition;
-			HandleRotation(curPos - this.startMousePos);
+			Vector2 deltaPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - this.startMousePos;
+
+			HandleRotation(deltaPos);
+			HandleMovement((deltaPos));
 		}
 
-		HandleMovement(new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")));
+
 
 
 
