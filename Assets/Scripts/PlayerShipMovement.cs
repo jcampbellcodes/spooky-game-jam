@@ -19,6 +19,11 @@ public class PlayerShipMovement : MonoBehaviour
 	private const float YOFFSET_DISTANCE = 1.0f;
 	private const float YOFFSET_SPEED = 1.0f;
 
+
+	// mouse vars
+	private Vector2 startMousePos =  Vector2.zero;
+	private Vector2 currMousePos =  Vector2.zero;
+
 	private Rigidbody _rigidbody;
 	public Rigidbody PlayerRB
 	{
@@ -38,11 +43,21 @@ public class PlayerShipMovement : MonoBehaviour
 
 	void Update()
 	{
+		if(Input.GetMouseButtonDown(0))
+		{
+			// track start pos + end pos
+			this.startMousePos = Input.mousePosition;
+		}
+		else if(Input.GetMouseButton(0))
+		{
+			// give your discovery to the rotation!
+			Vector2 curPos = Input.mousePosition;
+			HandleRotation(curPos - this.startMousePos);
+		}
 
-		_stickInput = Camera.main.transform.TransformDirection(new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")));
-		//HandleMovement(new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")));
+		HandleMovement(new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")));
 
-		//HandleRotation(new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")));
+
 
 	
 			
@@ -83,22 +98,6 @@ public class PlayerShipMovement : MonoBehaviour
 		
 		var angle = Mathf.Atan2(-inputVec.z, inputVec.x) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, angle, 0), ROTATION_SPEED * Time.deltaTime);
-	}
-
-	public void HandleBlowerMovement(Vector2 blowerDirection)
-	{
-		HandleMovement(blowerDirection);
-	}
-		
-		
-	private void DisplacePlayerY()
-	{
-		RaycastHit hit;
-		if(Physics.Raycast(transform.position, YOFFSET_RAYCASTVEC.normalized, out hit, YOFFSET_DISTANCE))
-		{
-			Vector3 newPos = new Vector3(transform.position.x, hit.point.y + YOFFSET_DISTANCE, transform.position.z);
-			transform.position = Vector3.Lerp(transform.position, newPos, YOFFSET_SPEED * Time.deltaTime);
-		}
 	}
 }
  
